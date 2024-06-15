@@ -1,0 +1,146 @@
+// Base styles for .footer
+.footer {
+  &__top {
+    background-color: #f2f2f2;
+    padding: 40px 0;
+
+    .footer__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .footer__branding {
+        max-width: 300px;
+        text-align: center;
+
+        h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #666;
+        }
+      }
+
+      .footer__sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+
+        .footer__section {
+          flex: 1;
+          margin: 0 10px;
+
+          h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+              margin-bottom: 5px;
+              font-size: 14px;
+
+              a {
+                color: #333;
+                text-decoration: none;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+
+        .footer__social {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+
+          a {
+            margin-right: 10px;
+            color: #333;
+
+            svg {
+              font-size: 24px;
+            }
+          }
+        }
+
+        .footer__apps {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+
+          img {
+            width: 120px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+
+    .footer__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__top {
+    padding: 20px 0;
+
+    .footer__container {
+      .footer__branding {
+        max-width: 100%; // Adjust for smaller screens
+        margin-bottom: 20px;
+      }
+
+      .footer__sections {
+        flex-direction: column;
+        align-items: center;
+
+        .footer__section {
+          margin: 10px 0;
+
+          h4 {
+            font-size: 16px; // Decrease font size for better fit
+          }
+        }
+      }
+
+      .footer__social {
+        margin-top: 20px;
+      }
+
+      .footer__apps {
+        margin-top: 20px;
+
+        img {
+          width: 100px; // Adjust image size for smaller screens
+        }
+      }
+    }
+  }
+
+  .footer__bottom {
+    padding: 10px 0;
+  }
+}

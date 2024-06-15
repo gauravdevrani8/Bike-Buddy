@@ -1,0 +1,121 @@
+$primary-color: #000;
+$background-color: #f4f4f4;
+$text-color: #333;
+$button-background-color: #000;
+$button-hover-color: #333;
+$notify-button-border: 1px solid #000;
+$notify-button-background-color: #fff;
+$light-text-color: #999;
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+}
+
+.career-page {
+  text-align: center;
+  padding: 40px 20px;
+
+  header {
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $text-color;
+    }
+  }
+
+  .vacancies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .vacancy {
+      display: flex;
+      align-items: center;
+      background: $background-color;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      width: 80%;
+      text-align: left;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .icon {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-right: 20px;
+      }
+
+      .details {
+        flex-grow: 1;
+
+        h3 {
+          font-size: 1.5rem;
+          color: $primary-color;
+          margin-bottom: 10px;
+        }
+
+        .category, .posted, .location, .salary {
+          font-size: 0.9rem;
+          margin-bottom: 5px;
+          color: $light-text-color; 
+        }
+
+        .description {
+          font-size: 1rem;
+          margin-bottom: 10px;
+          color: $text-color;
+        }
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+
+          .apply-button {
+            background: $button-background-color;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+              background: $button-hover-color;
+            }
+          }
+
+          .notify-button {
+            background: $notify-button-background-color;
+            color: $primary-color;
+            border: $notify-button-border;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+              background: $button-hover-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

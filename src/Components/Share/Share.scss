@@ -1,0 +1,46 @@
+.share-container {
+    display: flex;
+    flex-direction: row-reverse;
+    transform: rotate(-90deg);
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: large;
+    font-weight: bold;
+
+    align-items: center;
+  
+    @media (max-width: 800px) {
+      display: none;
+    }
+  
+    .share-text {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+  
+    .separator {
+      width: 35px;
+      background-color: #FF0336;
+      height: 2.5px;
+      margin-right: 1.5rem; /* 24px */
+    }
+  
+    .icon-container {
+      display: flex;
+      gap: 1.75rem; /* 28px */
+      margin-right: 1.75rem; /* 28px */;
+      
+      .icon {
+        transform: rotate(90deg);
+        cursor: pointer;
+        transition: color 200ms ease-in;
+  
+        &:hover {
+          color: #FF0336;
+        }
+      }
+    }
+  }
+  

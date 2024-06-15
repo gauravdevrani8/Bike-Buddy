@@ -1,0 +1,126 @@
+$gradient-start: #be9c5d;
+$gradient-end: #be9c5d;
+
+$gradient: linear-gradient(to right, $gradient-start, $gradient-end);
+
+.bike-booking {
+  font-family: 'Mulish', sans-serif;
+  background-color: #fff;
+  padding-left: 15px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 0 20px 20px rgba(0, 10, 10, 0.15);
+  width: 70%;
+  top: 50%;
+  position: absolute;
+  margin: 20px auto;
+  text-align: center;
+  @media (max-width: 767px) {
+    width: 100%; /* Adjust width for medium screens */
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 7px;
+  }
+}
+
+.bike-booking form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: 767px) {
+    width: 100%; /* Adjust width for medium screens */
+    margin: 0 auto;
+    font-size: small;
+    flex-direction: column;
+  }
+}
+
+.bike-booking form .form-group {
+  width: 100%;
+  margin: 1px 0px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.bike-booking form .form-group label {
+  flex: 0 0 10%;
+  font-weight: 400;
+  font-size: medium;
+  color: #afb0c7;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 767px) {
+    width: 90%; /* Adjust width for medium screens */
+    margin: 0 auto;
+    font-size: small;
+  }
+
+}
+
+.bike-booking form .form-group label .icon {
+  margin-right: 5px;
+}
+
+.bike-booking form input[type='date'],
+.bike-booking form input[type='time'],
+.bike-booking form select {
+  flex: 1;
+  padding: 0px 3px;
+  border: none;
+  font-family: 'Mulish', sans-serif;
+  font-size: medium;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  background-color: #fff;
+  @media (max-width: 767px) {
+    width: 90%; /* Adjust width for medium screens */
+    margin: 0 auto;
+    font-size: smaller;
+  }
+
+}
+
+.bike-booking form input[type='date']:focus,
+.bike-booking form input[type='time']:focus,
+.bike-booking form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.bike-booking form select option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bike-booking form .submit-button {
+  width: 90%;
+  padding: 17px 17px;
+  border: none;
+  color: #fff;
+  background: $gradient;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  font-size: 16px;
+  font-weight: 100;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  @media (max-width: 767px) {
+    width: 100%; /* Adjust width for medium screens */
+    margin: 0 auto;
+    font-size: small;
+    border-radius: 7px;
+  }
+}
+
+.bike-booking form .submit-button:hover {
+  background-color: #f66912;
+  transform: translateX(0px);
+}

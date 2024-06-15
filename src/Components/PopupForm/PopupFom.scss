@@ -1,0 +1,175 @@
+// Variables for colors and fonts
+$primary-color: #007bff;
+$secondary-color: #333;
+$background-color: #f8f9fa;
+$border-color: #ccc;
+$button-hover-background: #c8a056;
+$font-family: 'Arial, sans-serif';
+$font-size: 16px;
+
+// Gradient background
+$gradient-start: #be9c5d;
+$gradient-end: #be9c5d;
+$gradient: linear-gradient(to right, $gradient-start, $gradient-end);
+$button-background: $gradient;
+
+.modal {
+  font-family: $font-family;
+
+  & .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  & .modal-content-wrapper {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  & .modal-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  & .modal-panel {
+    width: 100%;
+    background: $background-color;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+    transition: transform 0.3s ease-out;
+  }
+
+  & .modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  & .modal-inner {
+    width: 100%;
+  }
+
+  & .modal-form-wrapper {
+    padding: 1.5rem 2.5rem;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  & .modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  & .form-group {
+    position: relative;
+  }
+
+  & .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $secondary-color;
+  }
+
+  & .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      transform: scale(1.05);
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  }
+
+  & .order-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: $button-background;
+    color: white;
+    border: none;
+    margin-top: 25px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background: $button-hover-background;
+    }
+  }
+}
+
+.buy-now-button {
+  background: $button-background;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+
+  svg {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    background-color: $button-hover-background;
+    transform: translateY(-2px);
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .modal .modal-content {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .modal .modal-panel {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal .modal-content {
+    width: 90%;
+    padding: 0.5rem;
+  }
+
+  .modal .modal-panel {
+    transform: scale(0.85);
+  }
+
+  .modal .modal-container {
+    padding: 1rem;
+  }
+
+  .modal .modal-form-wrapper {
+    padding: 1rem;
+  }
+}
