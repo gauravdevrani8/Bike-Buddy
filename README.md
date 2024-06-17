@@ -13,10 +13,10 @@ BikeBuddy is a bike rental website built with React and SCSS, offering users an 
 ### Home Page
 ![Home Page](https://github.com/gauravdevrani8/Bike-Buddy/assets/151192508/b68a1fab-1d20-467c-8942-642873d5676a)
 
-### Bike Availability
+### About
 ![Bike Availability](https://github.com/gauravdevrani8/Bike-Buddy/assets/151192508/62af7d3f-462c-4f15-b8a2-e056977af569)
 
-### About
+### Bike Availability
 ![Rental Management](https://github.com/gauravdevrani8/Bike-Buddy/assets/151192508/6ecee8c0-59ca-4da7-b4cf-932d37c1adc4)
 
 ## Technologies Used
@@ -38,10 +38,9 @@ To get a local copy up and running, follow these simple steps.
 1. Clone the repo
    ```sh
    git clone https://github.com/gauravdevrani8/Bike-Buddy.git.
- 2. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install.
-
 3. Start the development server.
   ```sh
    npm run dev
