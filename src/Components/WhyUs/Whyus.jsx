@@ -1,11 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './WhyUs.scss';
 import safetyImage from '../../assets/testimonial1.svg';
 import freedomImage from '../../assets/testimonial2.svg';
 import helmetImage from '../../assets/testimonial3.svg';
 import expertImage from '../../assets/testimonial4.svg';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const WhyUs = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll('.why-us-element');
+
+    elements.forEach((element, index) => {
+      const fromDirection = index % 2 === 0 ? '-100%' : '100%'; // Alternate between left and right
+      gsap.fromTo(element, 
+        { opacity: 0, x: fromDirection }, 
+        { 
+          opacity: 1, 
+          x: '0%', 
+          duration: 1, 
+          ease: 'power3.out', 
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 80%', // Adjust based on when you want the animation to start
+            end: 'top 60%',
+            scrub: true, // Smooth scrolling effect
+          }
+        }
+      );
+    });
+  }, []);
+
   return (
     <section className="why-us">
       <div className="container">
