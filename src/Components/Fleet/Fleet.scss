@@ -1,16 +1,15 @@
-
-
 .fleet-container {
   padding: 20px;
   font-family: 'Poppins', sans-serif;
-  border-radius: 4px;
-
-
-  
+  border-radius: 0px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 
   h1 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #333333;
   }
 }
 
@@ -18,21 +17,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
-  
 }
 
 .bike-card {
   border: 1px solid #ddd;
-  overflow: hidden;
   border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 
-
-
-  
   &:hover {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-    transition: box-shadow 0.3s ease;
-
   }
 }
 
@@ -40,11 +34,11 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: transform 0.9s ease;
-}
+  transition: transform 0.3s ease;
 
-.bike-image:hover {
-  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .bike-details {
@@ -52,29 +46,46 @@
 }
 
 .bike-name {
-  font-size: 20px;
-  margin: 0 0 10px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333333;
 }
 
 .bike-description {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
+  color: #666666;
 }
 
 .bike-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
 
   p {
     display: flex;
     align-items: center;
     margin: 0;
     font-size: 14px;
+    color: #666666;
 
     svg {
       margin-right: 5px;
+      color: #333333;
     }
   }
 }
 
+.book-now-button {
+  background-color: #456de4;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 13px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #333333;
+  }
+}

@@ -25,11 +25,10 @@ const Fleet = () => {
                   <FaStar /> {bike.rating} stars
                 </p>
               </div>
-              <Modal>
                 <button className="book-now-button">
-                  <FaBiking />
+                     <Modal/>
+
                 </button>
-              </Modal>
             </div>
           </div>
         ))}

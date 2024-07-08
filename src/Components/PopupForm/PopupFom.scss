@@ -3,13 +3,13 @@ $primary-color: #007bff;
 $secondary-color: #333;
 $background-color: #f8f9fa;
 $border-color: #ccc;
-$button-hover-background: #c8a056;
+$button-hover-background: #8c6cdf;
 $font-family: 'Arial, sans-serif';
 $font-size: 16px;
 
 // Gradient background
-$gradient-start: #be9c5d;
-$gradient-end: #be9c5d;
+$gradient-start: #7b6fff;
+$gradient-end: #af7bf7;
 $gradient: linear-gradient(to right, $gradient-start, $gradient-end);
 $button-background: $gradient;
 
@@ -110,7 +110,7 @@ $button-background: $gradient;
     color: white;
     border: none;
     margin-top: 25px;
-    border-radius: 4px;
+    border-radius: 0px;
     font-size: 1rem;
     cursor: pointer;
 
@@ -124,7 +124,7 @@ $button-background: $gradient;
   background: $button-background;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 6px 15px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
